@@ -1,0 +1,106 @@
+:root {
+  --grey1: #b5b5b5;
+  --grey2: #8c8c8c;
+  --white1: #f5f5f5;
+  --dark1: #525252;
+  --dark2: #343434;
+}
+
+body {
+  margin: 0;
+  background-image: -webkit-gradient(
+    linear,
+    right top,
+    left top,
+    from(var(--grey1)),
+    to(var(--grey2))
+  );
+  background-image: -o-linear-gradient(right, var(--grey1), var(--grey2));
+  background-image: linear-gradient(-90deg, var(--grey1), var(--grey2));
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-size: 100% 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.shadow {
+  box-shadow: 2px 2px 5px var(--dark2);
+  -webkit-box-shadow: 2px 2px 5px var(--dark2);
+}
+
+.container {
+  margin: 1rem auto;
+  max-width: 800px;
+  min-width: 320px;
+}
+
+.header {
+  background-color: var(--dark1);
+  color: var(--white1);
+  text-align: center;
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-image: url("./assets/cogs.svg");
+  background-size: contain;
+  background-position: center center;
+  background-size: cover;
+}
+
+.portrait {
+  width: 8rem;
+  height: auto;
+  border-radius: 5rem;
+  margin: 1rem;
+  border: 2px solid black;
+}
+
+.header-content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 250px auto;
+  column-gap: 1rem;
+}
+
+.grid-side {
+  background-color: blueviolet;
+}
+
+.grid-main {
+  background-color: green;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    font-size: 1.75rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .main-container {
+    grid-template-columns: auto;
+  }
+
+  .portrait {
+    width: 6rem;
+  }
+}
