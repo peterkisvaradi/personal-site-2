@@ -8,5 +8,8 @@
     "dev": "npx light-server -s . -b 127.0.0.1 -p8080  -w '**/*.html, **/*.js, **/*.css' -o"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
 }
