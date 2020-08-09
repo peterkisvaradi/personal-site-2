@@ -197,10 +197,6 @@ a {
     font-size: 1.75rem;
     letter-spacing: 0.25rem;
   }
-
-  .portrait {
-    width: 6rem;
-  }
 }
 
 @media (max-width: 576px) {
