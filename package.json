@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx light-server -s . -b 127.0.0.1 -p8080  -w '**/*.html, **/*.js, **/*.css' -o",
-    "build": "parcel build index.html -d dist --public-url ./"
+    "build": "rm -rf dist && mkdir dist && parcel build index.html -d dist --public-url ./"
   },
   "author": "",
   "license": "ISC",

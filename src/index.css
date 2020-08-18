@@ -1,237 +1,138 @@
 :root {
-  --grey1: #b5b5b5;
-  --grey2: #8c8c8c;
-  --grey3: #cfcfcf;
-  --white1: #f5f5f5;
-  --dark1: #525252;
-  --dark2: #343434;
-  --black1: #404040;
-
-  --min-width: 300px;
-}
-
-html {
-  min-width: var(--min-width);
-}
-
-body {
-  margin: 0.25rem;
-  background-image: -o-linear-gradient(right, var(--grey1), var(--grey2));
-  background-image: -webkit-gradient(
-    linear,
-    right top,
-    left top,
-    from(var(--grey1)),
-    to(var(--grey2))
-  );
-  background-image: linear-gradient(-90deg, var(--grey1), var(--grey2));
-  background-repeat: repeat-y;
-  background-size: cover;
-  background-size: 100% 100%;
-  font-family: "Roboto", sans-serif;
-  min-width: var(--min-width);
+  --almost-black: #222831;
+  --almost-white: #eeeeee;
+  --grey: #4f8a8b;
+  --yellowish: #fbd46d;
 }
 
 * {
-  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background: var(--almost-white);
+  color: var(--almost-black);
+  font-family: "Noto Sans", sans-serif;
+}
+
+main {
+  margin: 5rem auto 0 auto;
+  padding: 2rem;
+  max-width: 640px;
+}
+
 a {
+  color: var(--grey);
   text-decoration: none;
-  color: inherit;
+  transition: color 0.3s ease;
 }
 
-.shadow {
-  box-shadow: 2px 2px 5px var(--dark2);
-  -webkit-box-shadow: 2px 2px 5px var(--dark2);
+a:hover {
+  opacity: 0.5;
 }
 
-.container {
-  margin: 0.5rem auto;
-  max-width: 800px;
-  min-width: var(--min-width);
-}
-
-.header {
-  background-color: var(--dark1);
-  color: var(--white1);
-  text-align: center;
-  border: 2px solid var(--black1);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  background-image: url("./assets/cogs.svg");
-  background-size: contain;
-  background-position: center center;
-  background-size: cover;
-}
-
-.portrait-wrap {
-  overflow: hidden;
-  height: 6rem;
-  width: 6rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-radius: 5rem;
-  border: 2px solid var(--white1);
-  margin: 0.5rem;
-  background-color: var(--white1);
-}
-
-.portrait {
-  display: inline-block;
-  height: 100%;
-}
-
-.header-content {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
-}
-
-.main-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 0.5rem 3fr;
-  grid-template-columns: 1fr 3fr;
-  -webkit-column-gap: 0.5rem;
-  -moz-column-gap: 0.5rem;
-  column-gap: 0.5rem;
-}
-
-.grid-side {
-  background-color: var(--grey1);
-  border: 1px solid var(--grey3);
-}
-
-.side-header,
-.grid-main-header {
-  background-color: var(--black1);
-  margin: 0.5rem;
-  padding: 0.25rem 0;
-  color: var(--white1);
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.main-row-wrap ul {
-  margin-top: 0.25rem;
-}
-
-.main-row-wrap {
-  margin: 0.75rem;
-}
-
-.main-row-wrap + .main-row-wrap {
-  border-top: 1px dashed var(--black1);
-  padding-top: 0.5rem;
-}
-
-.main-row-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.main-row-subtitle {
-  font-weight: 500;
-}
-
-.main-row-content {
-  padding-right: 1rem;
-}
-
-.side-content {
-}
-
-.side-content-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  margin: 0.5rem;
-  padding: 0.5rem;
+h1 {
   font-size: 1.5rem;
-  color: var(--black1);
 }
 
-.side-content-row + .side-content-row {
-  border-top: 1px dashed black;
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
-.side-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
+h3 {
+  font-size: 1.2rem;
+  color: var(--grey);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+}
+
+h5 {
+  font-size: 1rem;
+  color: var(--grey);
+  letter-spacing: 1.2px;
+  font-weight: 400;
+}
+
+.intro {
+  margin-bottom: 1rem;
+}
+
+.intro .title {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
+  margin-bottom: 1rem;
 }
 
-.side-data {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.intro .title img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.intro .title .socialIcon {
+  color: var(--almost-black);
+  width: 2rem;
+  margin-left: 1rem;
+}
+
+.skills {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.side-icon > strong {
-  margin-left: 0.5rem;
-}
-
-.grid-main {
-  background-color: var(--grey3);
-  border: 1px solid var(--black1);
-}
-
-.main-container > div {
   margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
-  .header-content {
-    font-size: 1.75rem;
-    letter-spacing: 0.25rem;
+.skills > svg {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.experience {
+  margin-top: 3rem;
+}
+
+.experience .job {
+  margin-bottom: 2rem;
+  padding: 1rem 0 0 1rem;
+  border-left: 2px dashed var(--yellowish);
+}
+
+.experience .job > ul {
+  margin-left: 1rem;
+}
+
+.experience .job > ul > li {
+  margin: 0.5rem 0;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin: 1rem auto;
+    padding: 1rem;
   }
-}
 
-@media (max-width: 576px) {
-  .main-container {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+  }
+
+  .intro .title img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
   }
 }
